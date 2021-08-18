@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fields Page</title>
+    </head>
+    <body>
+        <h1>Email will be sent to <%= email %></h1>
+        <a href="#">Click here to change email</a>
+        <div>
+            <form action="/home" method="POST">
+                <label>Select your crypto</label>
+                <select name="coin" id="category">
+                    <option value="BTC-USD">BTC</option>
+                    <option value="LTC-USD">LTC</option>
+                    <option value="ADA-USD">ADA</option>
+                    <option value="DOGE-USD">DOGE</option>
+                </select>
+                <input type="submit" />
+            </form>
+        </div>
+    </body>
+</html>
