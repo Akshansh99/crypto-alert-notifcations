@@ -23,6 +23,7 @@ router.get('/',isSignedIn,(req,res)=>{
 });
 
 router.post('/showDetails',(req,res)=>{
+  res.cookie('prices',req.body.price1.toString());
   res.json(req.body);
 });
 
