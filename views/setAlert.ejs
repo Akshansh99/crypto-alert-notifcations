@@ -5,8 +5,9 @@
     </head>
     <body>
         <div>
-            <form action="/start/signin" method="POST">
-                <input type="text" name="email" id="email">
+            <h1>Price of <%= coin %> is <%= coinPrice %> </h1>
+            <form action="/setPrice/showDetails" method="POST">
+                <input type="text" name="price" id="price">
                 <input type="submit" />
             </form>
         </div>
