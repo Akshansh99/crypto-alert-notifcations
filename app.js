@@ -22,9 +22,15 @@ app.use('/setPrice',require('./routes/setPrice.js'));
 app.use('/delete',require('./routes/delete.js'));
 
 app.get('/:coin',async (req,res)=>{
-  const prices = await PriceCal(req.params.coin);
-  const val = prices.data.data.rates.USD
-  res.send(val);
+
+  try{
+    const prices = await PriceCal(req.params.coin);
+    res.send(prices.data);
+  }
+  catch(error){
+    console.error(error);
+  }
+  // const val = prices.data.data.rates.USD
 });
 
 app.listen(PORT,()=>console.log(`The Server running on ${PORT}`));
