@@ -2,7 +2,7 @@
 A program to send automated crypto price alerts. Bitcoin and Ethereum supported as of now.
 
 ## Description
-This program serves as an price tracking system for crypto enthusiasts and sends an automated email to notify if any alert is triggered. [Coinbase API](https://developers.coinbase.com/api/v2) is used in this application for fetching current market prices.
+This program serves as a price tracking system for crypto enthusiasts and sends an automated email to notify if any alert is triggered. [Coinbase API](https://developers.coinbase.com/api/v2) is used in this application for fetching current market prices.
 
 ## Requirements
 
