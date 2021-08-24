@@ -1,30 +1,37 @@
 const nodemailer = require("nodemailer");
-
+const {PASSWORD,EMAIL} = require("../config");
 //Create bull process which is executed if found in redis queue
 const emailProcess = async (job) =>{
-    let testAccount = await nodemailer.createTestAccount();
 
-    // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: testAccount.user, // generated ethereal user
-        pass: testAccount.pass, // generated ethereal password
-      },
-      tls: {
-          rejectUnauthorized: false
+    try{
+
+      //Email Information Object
+      const obj = {
+        "from" : EMAIL,
+        ...job.data
       }
-    });
-  
-    // send mail with defined transport object
-    let info = await transporter.sendMail(job.data);
-  
-    console.log("Message sent: %s", info.messageId);
-    // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-    return nodemailer.getTestMessageUrl(info);
-    // console.log(job.data);
+
+      //Instantiating mailing transport
+      const transport = nodemailer.createTransport({
+        service: "Hotmail",
+        auth: {
+            user: EMAIL,
+            pass: PASSWORD,
+        },  
+          tls: {
+              rejectUnauthorized: false
+          }
+      });
+
+      //Sending email
+      let info = await transport.sendMail(obj);
+      console.log("Message sent: %s", info.messageId);
+
+    }
+    catch(error){
+      console.log(error);
+    }
+
 }
 
 module.exports = emailProcess;

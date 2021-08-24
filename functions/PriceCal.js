@@ -6,7 +6,7 @@ const PriceCal = async (coin) =>{
         return await axios.get(`https://api.coinbase.com/v2/exchange-rates?currency=${coin}`);
     }
     catch(error){
-        console.log("error");
+        res.status(500).send(err);
     }
 
 }

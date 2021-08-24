@@ -18,24 +18,12 @@ app.use(
 
 app.use(cookieParser());
 
+//User Routes
 app.use('/start',require('./routes/signin.js')); //signing in routes
 app.use('/selectCoin',require('./routes/selectCoin.js')); //crypto-currency selection
 app.use('/setPrice',require('./routes/setPrice.js')); // setting price alert
 app.use('/delete',require('./routes/delete.js')); //delete alerts
-
-//Dummy coin information getter
-app.get('/:coin',async (req,res)=>{
-
-  try{
-    //calling price calculator function
-    const prices = await PriceCal(req.params.coin);
-    //rendering data
-    res.send(prices.data);
-  }
-  catch(error){
-    console.error(error);
-  }
-});
+app.use('/error',require('./routes/error.js')); //delete alerts
 
 //Server route
 app.listen(PORT,()=>console.log(`The Server running on ${PORT}`));
