@@ -31,3 +31,5 @@ This program serves as a price tracking system for crypto enthusiasts and sends 
     ```javascript
     npm run server
     ```
+## Author
+Akshansh Rewariya [@Akshansh99](https://github.com/Akshansh99)
