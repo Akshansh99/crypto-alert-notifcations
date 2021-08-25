@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-const {PASSWORD,EMAIL} = require("../config");
+const {PASSWORD,EMAIL,SERVICE} = require("../config");
 //Create bull process which is executed if found in redis queue
 const emailProcess = async (job) =>{
 
@@ -13,7 +13,7 @@ const emailProcess = async (job) =>{
 
       //Instantiating mailing transport
       const transport = nodemailer.createTransport({
-        service: "Hotmail",
+        service: SERVICE,
         auth: {
             user: EMAIL,
             pass: PASSWORD,
