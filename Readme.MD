@@ -13,17 +13,17 @@ This program serves as a price tracking system for crypto enthusiasts and sends 
 ## Installation
 
 * Clone the Repository.
-* (IMP) Create a file `config.js` and store your `PASSWORD` and `EMAIL` .
+* (IMP) Create a file `config.js` and store your `PASSWORD`, `EMAIL` & `SERVICE` (Email Provider) .
 
     ```javascript
     module.exports = {
         EMAIL: "YOUR_EMAIL",
-        PASSWORD: "YOUR_PASSWORD"
+        PASSWORD: "YOUR_PASSWORD",
+        PROVIDER: "YOUR EMAIL PROVIDER" //GMAIL, HOTMAIL & OTHERS
     }
-
-
+    ```
+    [Refer here](https://nodemailer.com/smtp/well-known/) to see if your email provider is supported. 
 * Install dependencies by
-
     ```javascript
     npm install
     ```
