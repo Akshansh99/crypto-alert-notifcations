@@ -31,5 +31,32 @@ This program serves as a price tracking system for crypto enthusiasts and sends 
     ```javascript
     npm run server
     ```
+* Run in Browser
+    ```javascript
+    localhost:5000\start
+    ```
+
+## Usage
+
+* Creating price alerts for cryptocurrencies. 
+    * This is achieved using Nodemailer service in combination with Redis Queueing system.
+    * Required fields i.e. `email`, `cryptocurrencies` and `alert price` are requested from the user.
+    * Cron job is ran every 10 seconds to check if alert price should be triggered or not
+    * API request is sent to Coinbase API for price reference.
+    * If alert is triggered, we add it to redis queue which then processed.
+    * In the processing step, we send an automated email using Nodemailer to the user's email Address. 
+
+
+## Useful Links
+
+* Redis 
+    * [What is redis?](https://redis.io/)
+    * [Great Video on how to start with Redis Queue](https://www.youtube.com/watch?v=b7DJEAJZsG0&t=997s)
+    * Bull JS - Bull is a Node library that implements a fast and robust queue system based on redis. [Read More](https://optimalbits.github.io/bull/)
+
+* [Nodemailer](https://nodemailer.com/about/)
+* [Cron-Job](https://en.wikipedia.org/wiki/Cron)
+
+
 ## Author
 Akshansh Rewariya [@Akshansh99](https://github.com/Akshansh99)
