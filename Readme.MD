@@ -1,4 +1,4 @@
-# Crypt Alert Notifier
+# Crypto Alert Notifier
 A program to send automated crypto price alerts. Bitcoin and Ethereum supported as of now.
 
 ## Description
