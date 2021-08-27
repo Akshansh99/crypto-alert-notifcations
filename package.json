@@ -1,13 +1,13 @@
 {
   "name": "Crypto-Currency-Alerts",
   "version": "1.0.0",
-  "description": "",
+  "description": "Alert notifier for cryptocurrency prices implemented using Nodemailer and Redis Queueing",
   "main": "index.js",
   "scripts": {
     "server": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Akshansh Rewariya",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
