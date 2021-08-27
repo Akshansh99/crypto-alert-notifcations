@@ -46,7 +46,7 @@ This program serves as a price tracking system for crypto enthusiasts and sends 
     * If alert is triggered, we add it to redis queue which then processed.
     * In the processing step, we send an automated email using Nodemailer to the user's email Address. 
 
-![Gif](https://github.com/Akshansh99/crypto-alert-notifcations/blob/master/public/gifs/working.gif)
+![Gif](https://github.com/Akshansh99/crypto-alert-notifcations/blob/master/public/gifs/working.gif =1120x630)
 
 ## Useful Links
 
