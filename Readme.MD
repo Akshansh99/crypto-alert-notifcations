@@ -52,7 +52,7 @@ This program serves as a price tracking system for crypto enthusiasts and sends 
 
 * Redis 
     * [What is redis?](https://redis.io/)
-    * [Great Video on how to start with Redis Queue](https://www.youtube.com/watch?v=b7DJEAJZsG0&t=997s)
+    * [Great Video on how to start with Redis Queue](https://www.youtube.com/watch?v=b7DJEAJZsG0)
     * Bull JS - Bull is a Node library that implements a fast and robust queue system based on redis. [Read More](https://optimalbits.github.io/bull/)
 
 * [Nodemailer](https://nodemailer.com/about/)
