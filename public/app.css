@@ -1,0 +1,102 @@
+body{
+    background-color: #DCDCDC !important;
+}
+
+.success-msg{
+    font-size:75px;
+    color: darkgreen;
+    margin-bottom: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.coin-price {
+    color:#34568B
+}
+
+img{
+    margin-bottom: 50px;
+}
+
+input.btn{
+    width: 400px
+}
+
+.btn{
+    margin-top: 15px;
+}
+
+#signin{
+    font: size 50px;
+    margin-bottom:50px
+}
+
+.error-para{
+    align-items: flex-start;
+    font-size:20px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    text-align: center;
+
+}
+
+.change-email{
+    margin-top: 50px;
+}
+
+#alert-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+#form-select{
+    width:400px;
+    border: 10px solid #f4f4f4;
+    border-radius: 10px;
+    text-decoration: none;
+    outline: 0;
+}
+
+.write-bar{
+    width:400px;
+    height: 55px;
+    border: 10px solid #f4f4f4;
+    border-radius: 10px;
+    text-decoration: none;
+    outline: 0;
+}
+
+.submit-width{
+    width: 200px;
+}
+
+#write-bar-email{
+    width:600px;
+    height: 55px;
+    border: 10px solid #f4f4f4;
+    border-radius: 10px;
+    text-decoration: none;
+    outline: 0;
+}
+
+input:focus,
+select:focus, .form-control:focus,
+textarea:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+

@@ -11,7 +11,7 @@ const checkAlert = new CronJob("*/10 * * * * *",
     const priceBTC = await PriceCal("BTC");
     const priceETH = await PriceCal('ETH');
     const curr_price_BTC = priceBTC.data.data.rates.USD;
-    const curr_price_ETH = 3400;
+    const curr_price_ETH = priceETH.data.data.rates.USD;
 
     //Reading database.json which acts as temp DB for our app
     fs.readFile("database.json", "utf8", async (err, data)=>{

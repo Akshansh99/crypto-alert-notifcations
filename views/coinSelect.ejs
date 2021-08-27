@@ -1,20 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Fields Page</title>
-    </head>
-    <body>
-        <h1>Email will be sent to <%= email %></h1>
-        <a href="/delete/email">Click here to change email</a>
+<%- include("./Partials/header") %>
+
+      <div class="container">
+        <img src="img/cclogo.png" height="200" width="210" alt="">
         <div>
             <form action="/setPrice" method="POST">
-                <label>Select your crypto</label>
-                <select name="coin" id="category">
-                    <option value="BTC">BTC</option>
-                    <option value="ETH">ETH</option>
+                <h3>SELECT YOUR CRYPTO </h3>
+                <select id = "form-select" class="form-select" aria-label="Default select example" name="coin" id="category">
+                  <option class="option-select" value="BTC">BTC</option>
+                  <option class="option-select" value="ETH">ETH</option>
                 </select>
-                <input type="submit" />
+                <input class="btn btn-secondary" type="submit" />
             </form>
         </div>
-    </body>
-</html>
+        <div class="change-email">
+          <p>Email will be sent to <em><%= email %></em></p>
+          <a href="/delete/email">Click here to change email</a>
+        </div>
+
+      </div>
+
+  
+<%- include("./Partials/footer") %>

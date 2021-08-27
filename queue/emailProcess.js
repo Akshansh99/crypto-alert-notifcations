@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-const {PASSWORD,EMAIL,SERVICE} = require("../config");
+const {PASSWORD,EMAIL,SERVICE} = require("../config"); //Importing Sender Email Information
 //Create bull process which is executed if found in redis queue
 const emailProcess = async (job) =>{
 

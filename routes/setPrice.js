@@ -26,7 +26,8 @@ router.get('/',isSignedIn,async (req,res)=>{
       //crypto name
       coin: cookies.coinSet,
       //crypto price
-      coinPrice : curr_value
+      coinPrice : curr_value,
+      email: cookies.email
     })
 });
 
@@ -69,19 +70,11 @@ router.post('/showDetails',async (req,res)=>{
           else console.log("Successfully added in database");
         });
     }
+  })
 
-
-});
-
-  // res.clearCookie("coinSet");
-  
   //redirect to finished route
-  res.redirect("/setPrice/finished");
+  res.redirect('/success');
 });
 
-//final route 
-router.get("/finished",async (req,res)=>{
-  res.render("../views/request.ejs");
-})
 
 module.exports = router;

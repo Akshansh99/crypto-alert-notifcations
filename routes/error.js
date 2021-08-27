@@ -6,7 +6,7 @@ const isSignedIn = require('../middleware/isSignedIn');
 router.get("/",(req,res)=>{
     
     //simple error page
-    res.send({msg:"You cannot access this page!"});
+    res.render("../views/error.ejs");
 });
 
 module.exports = router;

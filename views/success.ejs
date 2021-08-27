@@ -1,0 +1,11 @@
+<%- include("./Partials/header") %>
+        <div class="container">
+            <h1 class="success-msg">Success! 🤑🤑 </h1>
+            <h1>Alert has been set for <%= coin %> at <span class="coin-price">$<%= price %></span>!</h1>
+            <div class="change-email">
+                <p>Set another alert? <a href="/selectCoin">Click Here</a></p>
+                <p>Alerts are sent to <em><%= email %></em></p>
+                <a href="/delete/email">Click here to change email</a>
+                </div>
+        </div>
+<%- include("./Partials/footer") %>
