@@ -4,7 +4,7 @@
   "description": "Alert notifier for cryptocurrency prices implemented using Nodemailer and Redis Queueing",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon app.js"
+    "server": "node app.js"
   },
   "keywords": [],
   "author": "Akshansh Rewariya",
